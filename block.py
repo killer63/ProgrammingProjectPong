@@ -15,17 +15,17 @@ class Block:
         self.block.shapesize(stretch_wid=10, stretch_len=1)
         self.block.penup()
         self.block.goto(0, -200)
-        self.block.dy = 1
+        self.block.dy = 0.8
 
     def move(self):
         lock.acquire()
         try:
             self.block.sety(self.block.ycor() + self.block.dy)
-            if self.block.ycor() > 290:
-                self.block.sety(290)
+            if self.block.ycor() > 250:
+                self.block.sety(250)
                 self.block.dy *= -1
-            elif self.block.ycor() < -290:
-                self.block.sety(-290)
+            elif self.block.ycor() < -250:
+                self.block.sety(-250)
                 self.block.dy *= -1
         finally:
             lock.release()
