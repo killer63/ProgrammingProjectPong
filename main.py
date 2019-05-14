@@ -1,5 +1,3 @@
-# Simple Pong in Python 3 for Beginners
-# By @TokyoEdTech
 
 from turtle import Screen
 import threading
